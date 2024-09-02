@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-optical-sizing: auto;
+}
+body{
+  margin: 0 ;
+}
