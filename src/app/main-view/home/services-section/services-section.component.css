@@ -1,0 +1,51 @@
+.container{
+  width: 90%;
+  margin: auto;
+  border-top:3px solid #133778 ;
+}
+
+.title_font_style{
+  color: #133778;
+  font-size: 32px;
+  font-weight: 700;
+}
+.txt{
+  color: #0F2B5F;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn{
+  background-color: #8a91e53d;
+  color: #0F2B5F;
+  font-size: 14px;
+  border: none;
+}
+
+
+
+/* Extra small devices  */
+@media only screen and (max-width: 575px) {
+  .title_font_style{
+    font-size: 24px;
+  }
+  .txt{
+    font-size: 14px;
+  }
+  .btn{
+    font-size: 11px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones) */
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+}
+
+/* Medium devices (landscape tablets) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

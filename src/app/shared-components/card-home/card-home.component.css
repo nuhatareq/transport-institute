@@ -1,0 +1,38 @@
+.arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #0F2B5F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+.card_txt {
+  font-size: 20px;
+  color: #0F2B5F;
+}
+
+.card {
+  border: 1px solid #f1efef;
+}
+
+.card:hover{
+  background-color: #0F2B5F;
+  .card_txt{
+    color: white;
+  }
+  .arrow{
+    background-color: white;
+    color: #0F2B5F;
+  }
+
+}
+
+/* Extra small devices  */
+@media only screen and (max-width: 575px) {
+  .card_txt{
+    font-size: 16px;
+  }
+}
