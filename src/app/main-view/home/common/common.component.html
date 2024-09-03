@@ -1,1 +1,33 @@
-<p>common works!</p>
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-12 col-sm-12 col-md-4 border_line">
+      <div class="row">
+        <p class="titles">مواقع ذات صلة</p>
+      </div>
+      @for (link of links; track link) {
+      <div class="d-flex py-3">
+        <span>
+          <i class="fa-solid fa-arrow-left rounded-circle"></i>
+        </span>
+        <a href="#" class="links pe-2">{{ link }}</a>
+      </div>
+      }
+    </div>
+    <div class="col-12 col-sm-12 col-md-7 border_line">
+      <div class="row">
+        <p class="titles">شائعاً</p>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 mb-2">
+          <app-card-home card_title="المطارات"></app-card-home>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 mb-2">
+          <app-card-home card_title="الشركات والهيئات"></app-card-home>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 mb-2">
+          <app-card-home card_title="المجلة الالكترونية"></app-card-home>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

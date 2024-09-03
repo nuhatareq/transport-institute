@@ -1,0 +1,30 @@
+.container{
+  width: 90%;
+}
+.border_line{
+    border-top: 3px solid #0D3770;
+}
+.titles{
+  font-weight: 700;
+  color: #0D3770;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.links{
+ text-decoration: none;
+ color: #153E9B;
+ font-size: 16px;
+ font-weight: 700;
+}
+
+.fa-arrow-left {
+  width: 20px;
+  height: 20px;
+  background-color: #153E9B;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
