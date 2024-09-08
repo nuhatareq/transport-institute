@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url("/assets/transport.png"); 
+    background-size: cover;
+    background-position: center;
+    height: 590px;
+    min-width: 100%;
+    color:#ffffff;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.hero-content {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    transform: translateY(-50%);
+
+}
+
+.hero-content h1{
+    font-weight:400 ;
+    font-size:33.18px ;
+
+}
+.hero-content h2{
+font-weight:700 ;
+font-size:46.81px ;
+top: 170px;
+left: 885px;
+}
+
+.hero-content i{
+margin-right: 20px;
+top:50% ;
+width: 25px;
+height: 42px;
+top: 153px;
+left: 2px;
+}
+
+.hero-content .btn{
+    font-weight: 400;
+    font-size: 16px;
+    width: 159px;
+    height: 50px;
+    top: 309px;
+    text-align: center;
+
+}
+
+
