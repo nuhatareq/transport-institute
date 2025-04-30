@@ -1,20 +1,25 @@
 .footer{
-    background-color: #19275A;
+    background-color: rgba(30, 30, 30, 0.9);
+    height: 350px;
+
     color: #ffffff;
     margin-top: 25px;
     position: relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .footer a {
     color: #ffffff;
     text-decoration: none;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-/* .footer h5{
-    font-weight: ;
-    font-size: ;
-} */
+.footer .x{
+    margin-top: 25px;
+}
+
+
 
 
 .footer-line {
@@ -54,6 +59,12 @@
     .footer-line {
         margin-top: 50px; 
     }
+    
 }
+@media (min-width: 576px) and (max-width: 767px)  {
+    .footer-logo {
+        top: 77%; 
+    }
 
+}
 

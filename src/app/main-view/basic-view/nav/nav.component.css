@@ -52,7 +52,7 @@ color: #ffffff;
  *::before {
      box-sizing: border-box;
  }
-.navbar {
+/* .navbar {
     background-color: #0F2B5F; 
 }
 .navbar-nav .nav-link {
@@ -79,28 +79,28 @@ color: #ffffff;
 .search-box .search-icon {
     margin-right: 10px; 
 }
-
+ */
 
 
 /* sm */
-@media (min-width:576px) {}
+/* @media (min-width:576px) {} */
 
 /* md */
-@media (min-width:768px) {
+/* @media (min-width:768px) {
 
     
-}
+} */
 
 /* lg */
-@media (min-width:992px) {
+/* @media (min-width:992px) {
 
     .navbar .navbar-nav .nav-item .nav-link{
         padding:5px ;
        }
-}
+} */
 
 /* xl */
-@media (min-width:1200px) {
+/* @media (min-width:1200px) {
 
     
   
@@ -110,18 +110,97 @@ color: #ffffff;
         padding-left: 15px;
     }
 
-}
+} */
 
 /* 2xl */
-@media (min-width:1400px) {
+/* @media (min-width:1400px) {
 
     .navbar-nav{
         margin-right: 110px;
         margin-left: 60px;
     }
+} */
+
+/* .navbar {
+    background-color: #000000;
+    driection: rtl;
+  } */
+  .bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #000000 !important;
+    direction: rtl;
 }
 
-
+.lng_btn{
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 200;
+    border-radius: 8px;
+    border: none;
+  }
+  .sign_btn{
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: 400;
+    border-radius: 8px;
+    border: none;
+  }
+  .txt_btn{
+    font-size: 14px;
+  }
+  
+  .eagle-logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo-text .x{
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .logo-text .y{
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .logo-text .z{
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  
+  .logo-box {
+    text-align: right;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .navbar-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+  
+    .logo-text div {
+      font-size: 11px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) {
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .logo-text div {
+      font-size: 13px;
+    }
+  }
+  
 
 
 

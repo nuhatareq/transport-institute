@@ -1,7 +1,7 @@
 
 
 .about h2{
-color: #0D3770;
+color: #000000;
 font-size: 26.81px;
 font-weight: 700;
 line-height: 32.82px;
@@ -13,6 +13,9 @@ top: 22px;
 left: 556.87px;
 
 }
+.about-img {
+    border-radius: 20px;
+  }
 
 .about .text-right{
     font-weight: 400;
@@ -22,3 +25,46 @@ left: 556.87px;
     font-weight: 400;
     font-size: 21px; 
 }
+
+.border_line{
+    border-top: 3px solid #000000;
+    margin-bottom:20px;
+    
+}
+.border_x_line{
+    border-top: 3px solid #000000;
+   
+   
+}
+
+
+.z{
+    padding-right: 50px;
+
+}
+
+
+.vision-section {
+    background-image: url('../../../../assets/OIP4.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+   
+}
+
+
+.message-section{
+    background-image: url('../../../../assets/OIP5.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+.message-section .border_x_line {
+    margin-top:200px; 
+  }
+   
+
