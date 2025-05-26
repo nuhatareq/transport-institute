@@ -5,12 +5,12 @@
 }
 
 
-  .hero-wrapper {
+  /* .hero-wrapper {
     background-color: #fff;
   }
   
   .hero-banner {
-    width: 90%;
+    width: 95%;
     max-width: 1900px;
     height: 500px;
     border-radius: 20px;
@@ -47,11 +47,45 @@
    
     font-weight: 700;
     font-size: 30px;
+  } */
+
+
+
+
+  .hero-wrapper {
+    background-color: #fff;
   }
-
-
-
-
-
+  
+  .hero-banner {
+    width: 95%;
+    max-width: 1900px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: url('/assets/transport.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-banner .overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(69, 69, 69, 0.8);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .hero-content {
+      padding-right: 150px;
+    }
+  }
+  
 
 
