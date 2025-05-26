@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardHomeComponent } from '../../../shared-components/card-home/card-home.component';
+import { CardHomeComponent } from '../../shared-components/card-home/card-home.component';
 
 @Component({
   selector: 'app-common',
