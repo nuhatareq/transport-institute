@@ -1,57 +1,9 @@
 
-
 body {
     background-color: #FFFFFf;
     margin: 0;
     padding: 0;
   }
-
-  /* .tabs-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    padding: 0;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  .custom-tab {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-bottom: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    background-color: #FFFFFF;
-    color: #000000;
-    transition: background-color 0.3s ease;
-    border-radius: 0;
-    margin-left: -1px; 
-    position: relative;
-    z-index: 1;
-    height: 50px;
-    white-space: nowrap;
-    width: fit-content;
-
-  }
-
-  .custom-tab:first-child {
-    border-top-left-radius: 6px;
-  }
-
-  .custom-tab:last-child {
-    border-top-right-radius: 6px;
-  }
-
-  .custom-tab.active {
-    background-color: #000000;
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 16px;
-    z-index: 2; 
-  } */
-
-
 
   .content-box {
     background-color: #e9e9e9;
@@ -59,7 +11,7 @@ body {
     border-top-left-radius: 20px;
     padding: 20px;
     margin: 0 20px;
-    height: 700px;
+    height: 400px;
   }
 
   .nav-tabs .nav-link {
@@ -81,4 +33,29 @@ body {
   .custom-tab:last-child .nav-link {
     border-top-right-radius: 6px;
   }
+  .nav-tabs {
+    border-bottom: none !important;
+  }
+  
+  .nav-tabs .nav-link {
+    border: none !important;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #164A82 !important;
+    border-color: #164A82 !important;
+    color: #fff !important;
+  }
+  
+  .pagination .page-link {
+    color: #164A82;
+  }
+  
+  .pagination .page-link:hover {
+    background-color: #f0f0f0;
+    color: #164A82;
+  }
+  
+
+   
   

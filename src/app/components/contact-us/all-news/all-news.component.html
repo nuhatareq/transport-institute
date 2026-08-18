@@ -1,0 +1,21 @@
+<div class="container news-section">
+    <div class="row g-0">
+      @for(news of newsList; track news){
+        <div class="col-12 col-md-4 my-4">
+          <div class="news-card">
+            <img src="../../../../assets/C 1.png" class="news-img" alt="خبر">
+            <div class="news-content">
+              <p class="news-text">{{ news.titleAr }}</p>
+              <div class="d-flex justify-content-end">
+                <button class="btn-more ">
+                  المزيد
+                  <i class="fa-solid fa-arrow-left ms-2 arr"></i>
+                </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  

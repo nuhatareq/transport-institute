@@ -1,43 +1,33 @@
-
-<section class="about py-5">
+<section class="about py-1">
     <div class="container  ">
         <div class="row mb-3 justify-content-between">
             <div class="col-md-6 col-12 vision-section z">
                 <div class="row  border_line"> </div>
-                <h2 class="mb-3 mt-4 ">رؤيتنا</h2>
+                <h2 class="mb-3 mt-4 ">{{ourVision?.nameAr}}</h2>
                 <div class="text-1">
                 <p class="text-right">
-                    يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .
-                </p>
-                <p class="text-right">
-                    يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .
+                    {{ourVision?.description_Ar}}
                 </p>
                 </div>
 
             </div>
             <div class="col-md-6 col-12  z ">
                 <div class="row  border_line"> </div>
-                <img src="../../../../assets/Subtract.png" alt="" class=" about-img ">
+                <img [src]="ourVision?.image" alt="" class=" about-img ">
             </div>
         </div>
         <div class="row py-3 justify-content-between ">
             <div class="col-md-6 col-12 z">
-                <img src="../../../../assets/Subtract.png" alt="" class="py-5">
+                <img [src]="ourMessage?.image" alt="" class="py-5">
                 <div class="row  border_x_line "> </div>
             </div>
             
             <div class="col-md-6 col-12 message-section z">
-                <h2 class="mb-3 mt-4">رسالتنا</h2>
+                <h2 class="mb-3 mt-4">{{ourMessage?.nameAr}}</h2>
                 <div class="text-1">
                 <p class="text-right">
-                    المعهد القومي للنقل منظمة تعليمية غير هادفة للربح، يعمل علي دمج
-                   جميع موارده بكفاءة للوفاء بمتطلبات سوق العمل من البرامج األكاديمية
-                                     والبحثية واالستشارية والتدريبية من خالل
-                </p>
-                <p class="text-right ">
-                    تطوير عالقات طويلة المدى وإقامة شراكات دائمة مع أطراف منظومة النقل
-                    المصري والمؤسسات الدولية واإلقليمية المعنية بقضايا النقل.
-                </p>
+                    {{ourMessage?.description_Ar}}                </p>
+              
                 <div class="row  border_x_line"> </div>
                 </div>
               
@@ -45,7 +35,3 @@
         </div>
 </div>
 </section> 
-
-
-
-    

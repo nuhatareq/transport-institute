@@ -26,6 +26,7 @@ export const routes: Routes = [
         '../app/components/scientific-departments/scientific-departments.component'
       ).then((c) => c.ScientificDepartmentsComponent),
   },
+
   {
     path: 'postgraduate-programs',
     loadComponent: () =>
@@ -60,9 +61,36 @@ export const routes: Routes = [
       import(
         '../app/components/contact-us/contact-us.component'
       ).then((c) => c.ContactUsComponent),
-  }
+  },
+
+  {
+    path: 'all-news',
+    loadComponent: () =>
+      import(
+        '../app/components/contact-us/all-news/all-news.component'
+      ).then((c) => c.AllNewsComponent),
+  },
+  {
+    path: 'faculty-categories',
+    loadComponent: () =>
+      import('../app/components/faculty-categories/faculty-categories.component')
+        .then((c) => c.FacultyCategoriesComponent),
+  },
+
+  {
+    path: 'faculty',
+    loadComponent: () =>
+      import(
+        '../app/components/faculty/faculty.component'
+      ).then((c) => c.FacultyComponent),
+  },
   
-  
-  
+  {
+    path: 'faculty/:id',
+    loadComponent: () =>
+      import('../app/components/faculty-details/faculty-details.component')
+        .then((c) => c.FacultyDetailsComponent),
+  },
+
   
 ];

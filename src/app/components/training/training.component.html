@@ -1,77 +1,52 @@
+    <div class="container py-5">
+      <h2 class="text-center mb-4" style="font-weight: 700; font-size: 35px; color: #000000;">التدريب</h2>
+      
+      <div class="mb-5">
+        <h6 class="mb-3" style="font-weight: 700; font-size: 20px; color: #000000;">نبذة عن التدريب</h6>
+        <p style="font-weight: 400; font-size: 24px; color: #000000;">
+          يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة.
+        </p>
+      </div>
+    
+      <ul class="nav nav-tabs justify-content-start ps-0 mb-0 border-0 px-4" role="tablist">
+        <li class="nav-item custom-tab" *ngFor="let cat of categories" role="presentation">
+          <button
+            (click)="setSelectedCategoryData(cat)"
+            class="nav-link"
+            [class.active]="selectedCategory?.id == cat.id"
+            type="button"
+            role="tab">
+            {{ cat.nameAr }}
+          </button>
+        </li>
+      </ul>
+      
+      <div class="content-box mt-0">
+        <div *ngIf="!subCategories.length && selectedCategoryFile" class="text-center mb-3">
+          <a [href]="selectedCategoryFile" target="_blank" rel="noopener noreferrer" class="content-link">
+            للتفاصيل اضغط هنا
+          </a>
+        </div>
+    
+        <div *ngIf="subCategories.length" class="subcategories-container mb-3">
+          <ul class="subcategories-list">
+            <li *ngFor="let sub of subCategories"
+           [class.active]="selectedSubCategoryId === sub.id"
+           (click)="selectSubCategory(sub)">
+           {{ sub.nameAr }}
+          </li>
 
-<div class="container py-5">
-    <h2 class="text-center mb-4" style="font-weight: 700; font-size: 35px; color: #000000;">التدريب</h2>
-    <div class="mb-5 ">
-      <h6 class=" mb-3" style="font-weight: 700; font-size: 20px; color: #000000;">نبذة عن التدريب</h6>
-      <p style="font-weight: 400; font-size: 24px; color: #000000;" >
-        يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة . يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .
-      </p>
+          </ul>
+        </div>
+    
+        <div *ngIf="selectedSubCategoryFile !== null" class="text-center">
+          <a *ngIf="selectedSubCategoryFile" [href]="selectedSubCategoryFile" target="_blank" rel="noopener noreferrer" class="content-link">
+            للتفاصيل اضغط هنا
+          </a>
+          <p *ngIf="!selectedSubCategoryFile" class="no-file-text">
+            لا يوجد ملف
+          </p>
+        </div>
+      </div>
     </div>
     
-        <ul class="nav nav-tabs justify-content-start ps-0 mb-0 border-0 px-5" id="myTab" role="tablist"  >
-          <li class="nav-item custom-tab" role="presentation">
-            <button class="nav-link active" id="rail-tab" data-bs-toggle="tab" data-bs-target="#rail" type="button" role="tab" aria-controls="rail" aria-selected="true">
-                  الخطة التدريبية 
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="traffic-tab" data-bs-toggle="tab" data-bs-target="#traffic" type="button" role="tab" aria-controls="traffic" aria-selected="false">
-                 الندوات والمؤتمرات 
-            </button>
-          </li>
-        </ul>
-      
-        <div class="tab-content mt-0 px-4" id="myTabContent">
-          <div class="tab-pane fade show active" id="rail" role="tabpanel" aria-labelledby="rail-tab">
-            <div class="content-box">
-              <h6 class="fw-bold mb-3 text-center">الخطة التدريبية</h6>
-              <div class="row g-3">
-                <div class="col-6 col-md-3 text ">الخطة</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">التاريخ</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">تاريخ البداية:</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">تاريخ النهاية:</div>
-                <div class="col-6 col-md-9"></div>
-
-                <div class="col-6 col-md-3  mb-4 text">معلومات عن الخطة</div>
-                <div class="col-6 col-md-9"></div>
-              </div>
-      
-              <p style="font-weight: 400; font-size: 24px; color: #000000;">
-                يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة . يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .
-              </p>
-           
-        </div>
-          </div>
-          <div class="tab-pane fade" id="traffic" role="tabpanel" aria-labelledby="traffic-tab">
-            <div class="content-box">
-              <h6 class="fw-bold mb-3 text-center">الندوات والمؤتمرات</h6>
-              <div class="row g-3">
-                <div class="col-6 col-md-3 text ">الخطة</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">التاريخ</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">تاريخ البداية:</div>
-                <div class="col-6 col-md-9"></div>
-      
-                <div class="col-6 col-md-3 text ">تاريخ النهاية:</div>
-                <div class="col-6 col-md-9"></div>
-
-                <div class="col-6 col-md-3  mb-4 text">معلومات عن الخطة</div>
-                <div class="col-6 col-md-9"></div>
-              </div>
-      
-              <p style="font-weight: 400; font-size: 24px; color: #000000;">
-                يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة . يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .يسعى المعهد القومي للنقل للتميز محلياً وإقليمياً في تخصصات النقل واللوجستيات، ويعمل على الحفاظ على برامج معترف بها دوليا مع مرتبة أكاديمية متميزة .
-              </p>
-           
-        </div>
-          </div>
-        </div>

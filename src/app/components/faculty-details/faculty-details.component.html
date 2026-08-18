@@ -1,0 +1,34 @@
+ <div class="faculty-details" *ngIf="faculty">
+    <div class="header">
+        <img  src="../../../assets/user.png"  />
+      <h2>{{ faculty.nameAr }}</h2>
+    </div>
+  
+    <div class="info-card">
+      <table>
+        <tr>
+          <th>المؤهل الأكاديمي</th>
+          <td>{{ faculty.academicQualification }}</td>
+        </tr>
+        <tr>
+          <th>الماجستير</th>
+          <td>{{ faculty.master }}</td>
+        </tr>
+        <tr *ngIf="faculty.phD">
+          <th>الدكتوراه</th>
+          <td>{{ faculty.phD }}</td>
+        </tr>
+        <tr>
+          <th>الدرجة الأكاديمية</th>
+          <td>{{ faculty.academic }}</td>
+        </tr>
+        <tr>
+          <th>الإيميل</th>
+          <td>{{ faculty.email }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+   
+
+   

@@ -1,0 +1,10 @@
+<div class="faculty-list">
+    <div class="faculty-card" *ngFor="let member of facultyList">
+        <img  src="../../../assets/user.png"  />
+
+      <h3 (click)="goToDetails(member.id)" class="name-link">
+        {{ member.nameAr }}
+      </h3>
+    </div>
+  </div>
+  

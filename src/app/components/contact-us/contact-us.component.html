@@ -1,1 +1,28 @@
-<p>contact-us works!</p>
+<div class="contact-section">
+    <h2 class="contact-title"> ! Get In Touch With Us Now</h2>
+   <div class="contact-container">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fas fa-phone-alt contact-icon"></i>
+        <h3>Telephone And Fax</h3>
+        <p>{{ contactData?.telephoneAndFax }}</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-envelope contact-icon"></i>
+        <h3>Email</h3>
+        <p>{{ contactData?.email }}</p>
+      </div>
+      <div class="contact-card">
+        <i class="fab fa-facebook contact-icon"></i>
+        <h3>Facebook Page</h3>
+        <a [href]="contactData?.facebookPage" target="_blank">{{ contactData?.facebookPage }}</a>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt contact-icon"></i>
+        <h3>Postal Address</h3>
+        <p>{{ contactData?.postalAddress }}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  

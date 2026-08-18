@@ -1,0 +1,16 @@
+<div class="text-center py-4" style="font-weight: 700; font-size: 35px; color: #000000;">
+  الأقسام العلمية
+</div>
+
+<div class="faculty-categories">
+    <div class="category-list" *ngIf="categories.length > 0; else noData">
+      <div class="category-card" *ngFor="let cat of categories" (click)="goToFacultyMembers(cat.id)">
+        {{ cat.nameAr }}
+      </div>
+    </div>
+  
+    <ng-template #noData>
+      <p class="no-data">لا توجد أقسام متاحة حاليا</p>
+    </ng-template>
+  </div>
+  

@@ -1,28 +1,45 @@
-
-<div class="text-center py-4" style="font-weight: 700; font-size: 35px; color: #000000;">  الدراسات العليا</div>
-<!-- Nav Tabs -->
-    <ul class="nav nav-tabs justify-content-start ps-0 mb-0 border-0 px-5" id="myTab" role="tablist"  >
-      <li class="nav-item custom-tab" role="presentation">
-        <button class="nav-link active" id="rail-tab" data-bs-toggle="tab" data-bs-target="#rail" type="button" role="tab" aria-controls="rail" aria-selected="true">
-             لائحة الدبلومات 
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="traffic-tab" data-bs-toggle="tab" data-bs-target="#traffic" type="button" role="tab" aria-controls="traffic" aria-selected="false">
-            لائحة الماجستير 
+  <div class="container py-5">
+    <h2 class="text-center mb-4" style="font-weight: 700; font-size: 35px; color: #000000;">
+      الدراسات العليا
+    </h2>
+    <ul class="nav nav-tabs justify-content-start ps-0 mb-0 border-0 px-4" role="tablist">
+      <li class="nav-item custom-tab" *ngFor="let cat of categories" role="presentation">
+        <button
+          (click)="setSelectedCategoryData(cat)"
+          class="nav-link"
+          [class.active]="selectedCategory?.id == cat.id"
+          type="button"
+          role="tab">
+          {{ cat.nameAr }}
         </button>
       </li>
     </ul>
-  <!-- Tab Content -->
-    <div class="tab-content mt-0 px-4" id="myTabContent">
-      <div class="tab-pane fade show active" id="rail" role="tabpanel" aria-labelledby="rail-tab">
-        <div class="content-box">
   
-        </div>
+    <div class="content-box">
+      <div *ngIf="selectedCategoryContent" class="main-content text-center mb-3">
+        <p>{{ selectedCategoryContent }}</p>
       </div>
-      <div class="tab-pane fade" id="traffic" role="tabpanel" aria-labelledby="traffic-tab">
-          <div class="content-box">
   
-        </div>
+      <div *ngIf="showSubCategories" class="subcategories-container mb-3">
+        <ul class="subcategories-list">
+          <li *ngFor="let sub of subCategories"
+              [class.active]="selectedSubCategoryId === sub.id"
+              (click)="selectSubCategory(sub)">
+            {{ sub.nameAr }}
+          </li>
+        </ul>
       </div>
+  
+      <div *ngIf="selectedSubCategoryContent !== null" class="sub-category-content-box">
+        <p *ngIf="selectedSubCategoryContent; else noContent" style="text-align: justify; white-space: pre-line;" >
+          {{ selectedSubCategoryContent }}
+        </p>
+        <ng-template #noContent>
+          <p class="no-file-text">لا يوجد محتوى</p>
+        </ng-template>
+      </div>
+      
     </div>
+  </div>
+  
+  

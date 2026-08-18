@@ -1,6 +1,4 @@
-
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2">
   <div
     class="container-fluid d-flex justify-content-between align-items-center flex-row-reverse"
   >
@@ -21,37 +19,21 @@
     >
       <ul
         class="navbar-nav d-flex flex-wrap justify-content-center gap-lg-3 text-end"
-      >
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">الرئيسية</a>
+      > 
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">الرئيسية</a>
+      </li>
+      @for(tab of tabList; track tab){
+        <li class="nav-item" (click)="chooseSelectedTab(tab)">
+          <a class="nav-link text-white" [href]="tab.url">{{tab.nameAr}}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="about-us">عن المعهد</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="scientific-departments"> الأقسام العلمية</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="postgraduate-programs">برامج الدراسات العليا</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="training"> التدريب</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="consulting-projects"> المشروعات الاستشارية</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="library"> المكتبة</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contact-us">تواصل معنا</a>
-        </li>
+      }
       </ul>
     </div>
 
     <div class="d-flex align-items-center gap-2 logo-box text-white text-end">
       <img
-        src="../../../../assets/misr-logo.png"
+        src="../../../../assets/لوجو المعهد.jpeg"
         alt="شعار النسر"
         class="eagle-logo"
       />
@@ -74,3 +56,4 @@
     </button>
   </div>
 </nav>
+

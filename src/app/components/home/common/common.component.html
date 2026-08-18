@@ -1,54 +1,20 @@
-
-  
-
-
-<!-- <div class="background_theme">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-12 col-sm-12 col-md-4 border_line">
-        <div class="row">
-          <p class="titles">مواقع ذات صلة</p>
-        </div>
-        
-      </div>
-      <div class="col-12 col-sm-12 col-md-7 border_line">
-        <div class="row">
-         
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 mb-2">
-            <app-card-home card_title="المطارات"></app-card-home>
-          </div>
-          <div class="col-12 col-sm-12 col-md-6 mb-2">
-            <app-card-home card_title="الشركات والهيئات"></app-card-home>
-          </div>
-          <div class="col-12 col-sm-12 col-md-6 mb-2">
-            <app-card-home card_title="المجلة الالكترونية"></app-card-home>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
 <section class="related-sites-section py-5">
   <div class="container">
     <h3 class="section-title text-end mb-4">مواقع ذات صلة</h3>
+</div>
     <div class="row justify-content-center gap-3 gap-md-0">
+      @for(site of sitesList; track site){
       <div class="col-10 col-sm-6 col-md-2">
         <div class="related-card d-flex justify-content-between align-items-center p-3">
-          <span class="site-title">خدمة الأحوال المرورية</span>
+          <span class="site-title"> {{site.nameAr}} </span>
           <div class="arrow-circle">
             <i class="fas fa-arrow-left"></i>
           </div>
         </div>
       </div>
+    }
 
-      <div class="col-10 col-sm-6 col-md-2">
+      <!-- <div class="col-10 col-sm-6 col-md-2">
         <div class="related-card d-flex justify-content-between align-items-center p-3">
           <span class="site-title">  خدمة المرور</span>
           <div class="arrow-circle">
@@ -82,12 +48,20 @@
             <i class="fas fa-arrow-left"></i>
           </div>
         </div>
-      </div>
+      </div> -->
+
     </div>
-  </div>
+  
 </section>
 
 
 
 
 
+<!-- links: Array<string> = [
+  'خدمات الاحوال المدنية',
+  'خدمات المرور',
+  'خدمات الحج والعمرة',
+  'خدمات الادلة الجنائية',
+  'خدمات تصاريح العمل',
+]; -->

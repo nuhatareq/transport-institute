@@ -1,7 +1,5 @@
+<!-- <div class="container py-5 text-end">
 
- 
-
-<div class="container py-5 text-end">
   <div class="row align-items-center mb-4">
     <div class="col-md-9">
       <h3 class="fw-bold">الخدمات الالكترونية</h3>
@@ -17,41 +15,27 @@
         </div>
   </div>
 
+
+  
   <div class="row g-3">
-    <div class="col-12 col-md-4">
-      <div class="service-card d-flex justify-content-between align-items-center">
-        <span class="service-title">خدمات تصاريح العمل</span>
-        <div class="icon-circle">
-          <i class="fa-solid fa-arrow-left"></i>
+    @for(service of servicesList; track service){
+      <div class="col-12 col-md-4">
+        <div class="service-card d-flex justify-content-between align-items-center">
+          <span class="service-title">{{service.nameAr}}</span>
+          <div class="icon-circle">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="col-12 col-md-4">
-      <div class="service-card d-flex justify-content-between align-items-center">
-        <span class="service-title">خدمات الادلة الجنائية</span>
-        <div class="icon-circle">
-          <i class="fa-solid fa-arrow-left"></i>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-12 col-md-4">
-      <div class="service-card d-flex justify-content-between align-items-center">
-        <span class="service-title">خدمات الاحوال المدنية</span>
-        <div class="icon-circle">
-          <i class="fa-solid fa-arrow-left"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+    }
   
 
+  </div>
   
   <div class="row mt-4">
     <div class="col-11"></div>
     <div class="col-1">
-      <button class="btn-more">
+      <button class="btn-more" (click)="showAllServices()">
         المزيد
         <i class="fa-solid fa-arrow-left ms-2 arr"></i>
       </button>
@@ -61,4 +45,4 @@
 </div>
 
 
-
+ -->
